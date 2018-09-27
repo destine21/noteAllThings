@@ -7,8 +7,18 @@ Frida
 ### Spawn app & Loadscript
         frida -U -l script.js -f com.android.chrome --no-pause
 
+### Remote spawn app & Loadscript
+Run frida server with
+
+        ./frida-server -l 0.0.0.0
+
+frida command:
+
+        frida -H 192.168.1.xx -l script.js -f com.android.chrome --no-pause
+
 ### Fix 
 run this before frida-server
+
         setenforce 0
 
 ### Example frida script
