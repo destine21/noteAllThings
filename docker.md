@@ -1,5 +1,5 @@
 Docker
-=== change
+===
 
 ## Docker Search
 Search a container
@@ -34,3 +34,16 @@ Example
 Run an existing container
 
         docker start [CONTAINER_ID|CONTAINER_NAME] -i
+
+---
+## Create a Docker Image
+
+docker commit <CONTAINER> <IMAGENAME>
+
+---
+## Push to DockerHub
+```
+docker login -u <USERNAME>
+docker tag <CONTAINER> <USERNAME>/<DOCKER_REPO>:<TAG>
+docker push <USERNAME>/<DOCKER_REPO>:<TAG>
+```
