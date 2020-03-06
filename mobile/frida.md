@@ -15,6 +15,7 @@ Run frida server with
 frida command:
 
         frida -H 192.168.1.xx -l script.js -f com.android.chrome --no-pause
+        frida -D <device-id> -l script.js -f com.android.chrome --no-pause
 
 ### Fix 
 run this before frida-server
