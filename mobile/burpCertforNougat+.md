@@ -1,4 +1,4 @@
-Install Burp Cert to Android version 7 or more
+# Install Burp Cert to Android version 7 or more
 ===
 
 1. Create pem cert file and rename it to hash by following command
@@ -23,6 +23,9 @@ reboot
 
 Reference https://blog.ropnop.com/configuring-burp-suite-with-android-nougat/#installburpcaasasystemleveltrustedca
 
+## Or use Frida script Universal 
+https://codeshare.frida.re/@pcipolloni/universal-android-ssl-pinning-bypass-with-frida/
+
 
 ## Fix certificate too long
 Using Burp 1.17.15, Chrome 55.0.2883.91, Android 6.0.1 (CyanogenMod 13 on a Nexus 6), I encountered the same issue.  I worked around this problem by generating my own certificate and re-importing. 
@@ -39,3 +42,4 @@ After importing the certificate in Burp and restarting Burp, I downloaded it to 
 adb root && adb wait-for-device remount && adb wait-for-device push [name of cert] /system/etc/security/cacerts/[name of cert]
 
 Then checked the permissions on the file:  adb shell ls -al -Z /system/etc/security/cacerts/* to make sure everything was okay and rebooted the phone.
+
