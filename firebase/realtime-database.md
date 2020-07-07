@@ -31,3 +31,17 @@ Put .json to the end of the database url
 
     https://docs-examples.firebaseio.com/rest/saving-data/fireblog/users.json
     https://docs-examples.firebaseio.com/rest/saving-data/fireblog/posts.json?print=pretty
+
+
+## if the firebase realtime database rule is set as follows, any authenticated user can steal, modify, or delete data in the database.
+
+    {
+        "rules": {
+            ".read": "auth !== null",
+            ".write": "auth !== null"
+        }
+    }
+
+Secure the rules 
+https://firebase.google.com/docs/database/security/securing-data
+https://www.youtube.com/watch?v=3qODuvp1Zp8

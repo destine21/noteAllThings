@@ -32,3 +32,6 @@ db.collection('products').get().then(res => {res.docs.forEach(e => console.log(e
 
 ## firestore hacking guide
 https://www.youtube.com/watch?v=b7PUm7LmAOw
+
+## Role base implement
+https://firebase.google.com/docs/firestore/solutions/role-based-access
