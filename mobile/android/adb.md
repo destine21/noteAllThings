@@ -5,7 +5,6 @@ Start a remote shell in the target emulator/device instance:
 
     adb shell
     adb shell -d <deviceId> // if multiple devices
-    adb shell -s <ip>:<port> // remote adb
 
 Get a list of connected devices:
 
@@ -31,3 +30,8 @@ Copy a file/directory to the target device:
 
     adb push path/to/local_file_or_directory path/to/device_destination_directory
 
+
+adb over network
+
+    adb connect 192.168.1.36:5555
+    adb disconnect
