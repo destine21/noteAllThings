@@ -9,6 +9,7 @@ Use the following setting:
     firebase.firestore().settings({ experimentalForceLongPolling: true });
 
 ## find firebase configuration
+For webapp
 ```js
 // firebase config
 firebase.initializeApp({
@@ -17,6 +18,13 @@ firebase.initializeApp({
   projectId: '### CLOUD FIRESTORE PROJECT ID ###'
 });
 ```
+
+for Android search .firebaseio.com in the sourcecode
+<string name="firebase_database_url">https://{projectId}.firebaseio.com</string>
+
+## curl to get firestore token
+
+  curl 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithCustomToken?key=[API_KEY]' -H 'Content-Type: application/json' --data-binary '{"token":"[CUSTOM_TOKEN]","returnSecureToken":true}'
 
 ## find all firestore collection name
 By searching for the following keyword:
@@ -35,3 +43,6 @@ https://www.youtube.com/watch?v=b7PUm7LmAOw
 
 ## Role base implement
 https://firebase.google.com/docs/firestore/solutions/role-based-access
+
+## firestore crud
+https://medium.com/@aaron_lu1/firebase-cloud-firestore-add-set-update-delete-get-data-6da566513b1b

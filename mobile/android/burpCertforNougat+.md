@@ -12,6 +12,7 @@ mv cacert.pem <hash>.0
 ```sh
 adb push <cert>.0 /sdcard/ 
 adb shell
+su
 setenforce 0 
 mount -o rw,remount /system
 

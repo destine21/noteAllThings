@@ -1,0 +1,41 @@
+test firestore
+
+<body>
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+</body>
+
+
+<script>
+    // TODO: Replace the following with your app's Firebase project configuration
+    var firebaseConfig = {
+        apiKey: "APIKEY",
+        authDomain: "projectId.firebaseapp.com",
+        databaseURL: "https://projectId.firebaseio.com",
+        projectId: "projectId",
+        storageBucket: "projectId.appspot.com",
+    };
+
+    // customToken
+    // var token = "ey...";
+
+    firebase.initializeApp(firebaseConfig);
+    db = firebase.firestore();
+
+    // firebase.auth().signInWithCustomToken(token);
+    db.collection('items').doc("doc1").get().then(res => {console.log(res.data())});
+    db.collection('items').get().then(res => {console.log(res.docs[1].data())});
+    
+    db.collection("items").doc("LA").set({
+        name: "LA",
+        state: "CA",
+        country: "USA"
+    })
+
+</script>
