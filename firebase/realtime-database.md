@@ -42,6 +42,7 @@ Put .json to the end of the database url
         }
     }
 
-Secure the rules 
-https://firebase.google.com/docs/database/security/securing-data
-https://www.youtube.com/watch?v=3qODuvp1Zp8
+## secure the rule
+- https://firebase.google.com/docs/rules/rules-language
+- https://firebase.google.com/docs/database/security/securing-data
+- https://www.youtube.com/watch?v=3qODuvp1Zp8

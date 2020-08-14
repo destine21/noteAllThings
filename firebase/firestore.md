@@ -46,3 +46,7 @@ https://firebase.google.com/docs/firestore/solutions/role-based-access
 
 ## firestore crud
 https://medium.com/@aaron_lu1/firebase-cloud-firestore-add-set-update-delete-get-data-6da566513b1b
+
+## secure the rule
+- https://firebase.google.com/docs/firestore/security/rules-structure
+- https://firebase.google.com/docs/rules/rules-language
