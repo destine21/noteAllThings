@@ -19,20 +19,27 @@ curl --header "Authorization: key=$api_key" \
 
 ## Send noti
 ```
-POST https://fcm.googleapis.com/fcm/send HTTP/1.1
+POST /fcm/send HTTP/1.1
+Host: fcm.googleapis.com
+Authorization: key=AAAAmtutpjA:....
+Content-type:application/json
+Content-Length: 177
 
-Content-Type: application/json
-Authorization: Key=AizaSy
 {
-  "message":{
-    "topic" : "<TOPIC-NAME>",
-    "notification" : {
-      "body" : "This is a Firebase Cloud Messaging Topic Message!",
-      "title" : "FCM Message"
-      }
-   }
+  "to": "/topics/news",
+  "notification": {
+    "title": "Breaking News",
+    "body": "New news story available."
+  },
+  "data": {
+    "story_id": "story_12345"
+  }
 }
 ```
 
+## Send noti legacy to v1
+https://firebase.google.com/docs/cloud-messaging/migrate-v1
+
 ## Ref
     https://abss.me/posts/fcm-takeover/
+    https://firebase.google.com/docs/cloud-messaging/server
